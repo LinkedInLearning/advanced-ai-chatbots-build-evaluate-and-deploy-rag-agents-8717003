@@ -1,0 +1,38 @@
+[
+  {
+    "question": "How many paid time off days do full-time employees get?",
+    "expected": "Full-time employees get 15 days of paid time off per year, plus 6 paid holidays."
+  },
+  {
+    "question": "How is your decaf coffee made?",
+    "expected": "The decaf uses the Swiss Water method (no chemical solvents), removing about 99.9% of the caffeine."
+  },
+  {
+    "question": "Can I bring my dog inside the cafe?",
+    "expected": "Dogs are welcome on the patios; inside, only service animals are allowed."
+  },
+  {
+    "question": "What is the Lantern and who invented it?",
+    "expected": "The Lantern is the signature drink (espresso, steamed milk, honey-cinnamon syrup, and cocoa), invented by the first barista, Priya, during a 2018 power outage."
+  },
+  {
+    "question": "What is your refund policy for opened bags of beans?",
+    "expected": "Unopened bags are returnable within 14 days with a receipt; opened bags can't be returned, but a genuinely off bag will be replaced."
+  },
+  {
+    "question": "Do gift cards expire?",
+    "expected": "No. Gift cards never expire and carry no fees."
+  },
+  {
+    "question": "Do you offer coconut milk?",
+    "expected": "No — the cafe does not offer coconut milk."
+  },
+  {
+    "question": "What is the wifi password at the Cambridge cafe?",
+    "expected": "Wifi is free and unlimited, but the documents do not list a password, so the bot should say it doesn't have a password to give."
+  },
+  {
+    "question": "Do you offer franchise opportunities?",
+    "expected": "The documents don't cover franchising or opening your own location, so the bot should honestly say it doesn't have that information."
+  }
+]

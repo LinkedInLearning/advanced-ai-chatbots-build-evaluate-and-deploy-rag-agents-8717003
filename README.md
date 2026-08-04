@@ -1,36 +1,66 @@
-# Advanced AI Chatbots: Build, Evaluate, and Deploy RAG Agents
-This is the repository for the LinkedIn Learning course `Advanced AI Chatbots: Build, Evaluate, and Deploy RAG Agents`. The full course is available from [LinkedIn Learning][lil-course-url].
+# ☕ Build Your Own AI Chatbot — Exercise Files
 
-![course-name-alt-text][lil-thumbnail-url] 
+Exercise files for the LinkedIn Learning course. You'll build a production RAG
+chatbot from an empty file: it answers from your documents, cites its sources,
+declines honestly when it doesn't know, gets graded by an LLM judge, and ends up
+live on a public URL.
 
-_See the readme file in the main branch for updated instructions and information._
-## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+Sample data is *Roya's Imaginary Cafe* — a fictional Cambridge, MA coffee shop.
+In Chapter 5 you swap in documents you actually care about.
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+## Start here
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
+1. **Set up your environment** — follow [`SETUP.md`](SETUP.md). Most "it doesn't
+   work for me" problems are environment problems; that page is the golden path.
+2. **Get a free API key** (no credit card) at https://aistudio.google.com/apikey
+3. **Open the chapter you're on** and work in its `start_here/` folder.
 
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
+## How the folders work
 
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
+Each chapter has two folders:
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+- **`start_here/`** — where the chapter begins. Open this and build along.
+- **`finished/`** — where the chapter ends. Check your work, or catch up.
 
+Each chapter's `start_here/` is identical to the previous chapter's `finished/`,
+so you can jump in at any chapter without having done the earlier ones.
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+| Chapter | What you build |
+|---|---|
+| `chapter_01_first_chatbot` | A chat UI wired to a model — from an empty `app.py` |
+| `chapter_02_add_rag` | `ingest.py`, a vector database, and a search tool the agent can call |
+| `chapter_03_citations_guardrails` | `chatbot.py` (the brain), a citation contract, clickable sources, logging middleware |
+| `chapter_04_llm_judge` | A trace tool, a golden question set, and LLM judges for faithfulness and completeness |
+| `chapter_05_ship_it` | Cloud-ready hardening, a public deploy, and the swap to your own documents |
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+## Running any chapter
 
+```bash
+cd chapter_02_add_rag/start_here        # or whichever chapter you're on
+
+python -m pip install -r requirements.txt
+export GOOGLE_API_KEY="AIza..."         # Windows PowerShell: $env:GOOGLE_API_KEY="AIza..."
+
+python ingest.py                        # Chapter 2 onward — builds the document database
+python -m streamlit run app.py
+```
+
+Two files start out **empty on purpose**, because you write them from scratch on
+camera: `chapter_01_first_chatbot/start_here/app.py` and
+`chapter_03_citations_guardrails/start_here/chatbot.py`.
+
+## Also in here
+
+- [`SETUP.md`](SETUP.md) — environment setup and troubleshooting
+- [`STREAMING_AND_CITATIONS.md`](STREAMING_AND_CITATIONS.md) — optional deep dive
+  for the curious: why streaming turns off when citations arrive, and how you'd
+  keep both
+- `chapter_05_ship_it/sample_swap_docs/` — the Roya Land demo documents used in
+  Chapter 5, if you want to follow the swap before bringing your own
+
+## A note on the API key
+
+Your key goes in an environment variable, or in Streamlit Secrets when you
+deploy — **never in the code, and never committed.** The `.gitignore` here is set
+up to keep `.env` files and `secrets.toml` out of git, but the habit matters more
+than the safety net.

@@ -1,0 +1,27 @@
+# Roya's Imaginary Cafe RAG Chatbot — dependencies
+#
+# Requires Python 3.10+ (LangChain 1.x and Streamlit 1.4x+ both need it).
+# pip can't enforce that, so app.py / ingest.py / evaluate.py also check at
+# runtime and exit with a clear message on older Pythons. See SETUP.md.
+#
+# We read PDFs and text files with pypdf + langchain-core directly, so there's
+# no dependency on the (now sunset) langchain-community package.
+#
+# THE REAL LOCK: once this installs clean AND the app works end to end, run
+#     pip freeze > requirements.txt
+# to pin the exact versions you recorded with. This file is the "gets you green"
+# starting point, not the final lock.
+
+streamlit>=1.40
+langchain==1.3.7
+langchain-google-genai>=4.0
+langchain-chroma==1.1.0
+langchain-text-splitters
+pypdf>=5.0
+# Pinned for Streamlit Community Cloud: the resolver otherwise picks a
+# protobuf 5.x that grpcio/google-genai won't load at boot.
+protobuf>=4.25.3,<5
+
+# Optional — only if you swap MODEL in chatbot.py to another provider:
+# langchain-openai>=1.0
+# langchain-anthropic>=1.0
