@@ -22,15 +22,12 @@ To resolve this issue:
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+## Roya Kandalan
+Roya Kandalan is a data scientist with a background in mathematics, statistics, and machine learning.</p><p>Roya brings a strong foundation in mathematics and statistics to her work in artificial intelligence and machine learning. She specializes in breaking down complex problems into manageable pieces and using coding and ML algorithms to find efficient, reliable solutions. Her recent work explores neurosymbolic AI, combining large language models, knowledge graphs, and graph neural networks to turn system documentation into validated, interactive models. Roya is driven by a belief that every problem has a solution, and she approaches each new challenge with curiosity, analytical rigor, and determination. She is currently an adjunct professor at Northeastern University.
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-course-url]: https://www.linkedin.com/learning/advanced-ai-chatbots-build-evaluate-and-deploy-agents-rag-chatbots
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D560DAQF48cJpG3o99Q/learning-public-crop_675_1200/B56Z9s3EhwHYAY-/0/1784237804307?e=2147483647&v=beta&t=Te82MNKnViJItTbHwJPNvD98JzZGTYGJ4HwonT5L39E
 
