@@ -9,7 +9,7 @@ Learn how to build, measure, and deploy an advanced RAG chatbot with LangChain 1
 2. Implement structured citations to keep responses accurate and traceable.
 3. Extend chatbot behavior with middleware for logging and fallback.
 
-_See the readme file in the main branch for updated instructions and information._
+_See the readme file in the roya branch for updated instructions and information._
 
 ## Roya Kandalan
 Roya Kandalan is a data scientist with a background in mathematics, statistics, and machine learning.</p><p>Roya brings a strong foundation in mathematics and statistics to her work in artificial intelligence and machine learning. She specializes in breaking down complex problems into manageable pieces and using coding and ML algorithms to find efficient, reliable solutions. Her recent work explores neurosymbolic AI, combining large language models, knowledge graphs, and graph neural networks to turn system documentation into validated, interactive models. Roya is driven by a belief that every problem has a solution, and she approaches each new challenge with curiosity, analytical rigor, and determination. She is currently an adjunct professor at Northeastern University.
