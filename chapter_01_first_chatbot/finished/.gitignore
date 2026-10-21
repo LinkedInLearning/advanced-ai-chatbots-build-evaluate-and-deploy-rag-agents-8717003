@@ -1,0 +1,20 @@
+# Secrets — never commit your key
+.streamlit/secrets.toml
+*.env
+.env
+
+# The vector database is rebuilt from data/ by ingest.py — don't commit it
+chroma_db/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
+
+# Eval run history (generated)
+eval_history.jsonl
